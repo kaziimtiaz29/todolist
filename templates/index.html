@@ -1,0 +1,29 @@
+{% extends 'layout.html'%}
+ 
+{% block body %}
+
+<h4>TO DO LIST</h4>
+
+{% for todo in all_todos %}
+
+    <p>{{todo.id}} {{todo.Task}} 
+    {% if todo.Completed==True %}
+    &#9989
+    <form action="{{url_for('is_incomplete', n=todo.id)}}">
+        <input type="submit" value="InCompleted">
+    </form>
+    {% else%}
+    <form action="{{url_for('is_complete', n=todo.id)}}">
+        <input type="submit" value="Completed">
+    </form>
+    {% endif %}
+    <form action="{{url_for('is_delete', n=todo.id)}}">
+        <input type="submit" value="Delete">
+    </form>
+    <form action="{{url_for('update', n=todo.id)}}">
+        <input type="submit" value="Update">
+    </form>
+    </p> 
+    {% endfor %} 
+     
+{% endblock body %} 

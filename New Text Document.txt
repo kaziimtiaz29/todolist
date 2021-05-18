@@ -1,0 +1,13 @@
+#@app.route('/todos')
+#def to_dos():
+ #   game_with_id_1 = todos.query.get(1)
+  #  return str(game_with_id_1)
+
+
+'''all_todos = todos.query.all()
+    return all_todos'''
+'''
+list_of_todos = ""
+    for task in all_todos:
+        list_of_todos += "<br>"+ task.name
+    return list_of_todos'''
